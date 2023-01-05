@@ -6,6 +6,7 @@ import {
   FaTiktok,
   FaInstagram,
 } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className="w-full bg-Primary-900">
