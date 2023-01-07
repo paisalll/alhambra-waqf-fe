@@ -12,6 +12,7 @@ module.exports = {
           900: "#828387",
         },
         TitleText: "#27303E",
+        SubText: "#3F4753",
         BtnColor: "#F98D3E",
       },
     },
