@@ -10,9 +10,18 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <CardCategory text="Wakaf Pendidikan" icon={education} />
-      <CardCategory text="Wakaf Bangunan" icon={building} />
-      <CardWakaf />
+      <div className="flex gap-3">
+        {" "}
+        <CardCategory text="Wakaf Pendidikan" icon={education} />
+        <CardCategory text="Wakaf Bangunan" icon={building} />
+      </div>
+
+      <div className="grid lg:grid-cols-3 container gap-y-5 justify-center">
+        <CardWakaf />
+        <CardWakaf />
+        <CardWakaf />
+      </div>
+
       <Footer />
     </div>
   );
