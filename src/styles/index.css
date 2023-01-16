@@ -17,9 +17,35 @@ body {
   box-sizing: border-box;
 }
 .container {
-  max-width: 90%;
+  max-width: 85%;
   margin: 0 auto;
 }
 .shadownav {
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+}
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 25px;
+}
+/* ::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 500px;
+  background-color: #adadad;
+} */
+.imgLogo {
+  height: 10rem;
+  width: 25rem;
 }

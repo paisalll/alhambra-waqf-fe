@@ -15,7 +15,7 @@ const Header = () => {
   // };
   return (
     <header className="">
-      <nav className="shadownav h-20 flex items-center w-full bg-[#FBFBFB] ">
+      <nav className="shadownav h-20 flex items-center w-full bg-[#FBFBFB] z-20 fixed ">
         <div className="container flex justify-between">
           <div className=" flex items-center">
             <img src={logo} alt="Logo" className="mr-8 h-12 w-12 " />
