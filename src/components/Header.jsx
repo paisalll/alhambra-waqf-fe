@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/logo1.png";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 const Header = () => {
@@ -8,11 +8,11 @@ const Header = () => {
   const handleNav = () => {
     setNav(!nav);
   };
-  // const navLinkStyle = ({ isActive }) => {
-  //   return {
-  //     color: isActive ? "#854aea" : "#A7A7A7",
-  //   };
-  // };
+  const navLinkStyle = ({ isActive }) => {
+    return {
+      color: isActive ? "#204C94" : "#828387",
+    };
+  };
   return (
     <header className="">
       <nav className="shadownav h-20 flex items-center w-full bg-[#FBFBFB] z-20 fixed ">
@@ -20,8 +20,13 @@ const Header = () => {
           <div className=" flex items-center">
             <img src={logo} alt="Logo" className="mr-8 h-12 w-12 " />
             <ul className="hidden sm:hidden md:hidden lg:flex gap-x-8 text-base lg:text-[15px] font-normal text-Neutral-800">
-              <li>Home</li>
-              <li>Kategori</li>
+              <NavLink to="/" style={navLinkStyle}>
+                <li>Home</li>
+              </NavLink>
+              <NavLink to="/kategori_wakaf" style={navLinkStyle}>
+                <li>Kategori</li>
+              </NavLink>
+
               <li>Berita Wakaf</li>
               <li>Pembayaran Wakaf</li>
               <li>Tentang Kami</li>

@@ -98,11 +98,11 @@ export const CarouselMitra = () => {
   };
   return (
     <Slider {...settings}>
-      <div className="">
+      <div className="bg-black">
         <img
           src="https://buatlogoonline.com/wp-content/uploads/2022/10/Logo-BNI.jpg"
           alt="img-logo"
-          className="w-[15rem] h-[10rem] object-contain"
+          className="object-contain w-[15rem] h-[10rem] "
         />
       </div>
       <div className="flex justify-center items-center">
