@@ -3,27 +3,31 @@ import education from "../assets/education.png";
 import building from "../assets/building.png";
 import health from "../assets/health.png";
 import ribbon from "../assets/ribbon.png";
-import { CardBerita, CardCategory, CardWakaf } from "../components/CustomCard";
-import { GrFormNextLink } from "react-icons/gr";
-import { CarouselMitra } from "../components/Carousel";
-import Layout from "../components/Layout";
-import CustomButton from "../components/CustomButton";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { CarouselMitra } from "../components/Carousel/Carousel";
+import {
+  CardBerita,
+  CardCategory,
+  CardWakaf,
+} from "../components/Cards/CustomCard";
+import CustomButton from "../components/Button/CustomButton";
 import Player from "../components/Player";
+import Typography from "../components/Typography/Typography";
 function Home() {
   return (
-    <Layout>
-      <section className="bg-[#FBFBFB] pt-[8rem] pb-[5rem] ">
+    <>
+      <section className="bg-whiteBg pt-[8rem] pb-[5rem] ">
         <div className=" container">
           <div className=" md:flex ">
             <div className="md:w-[42%] ">
-              <h1 className="text-5xl  text-Primary-900 font-bold md:leading-[55px]">
-                Mari Berlomba Kebaikan dan Ayo Berwakaf
-              </h1>
-              <p className="py-8 text-sm md:text-base leading-5">
+              <Typography variant="h2" type="bold" color="primary-90">
+                Mari Berlomba dan Ayo Berwakaf
+              </Typography>
+              <Typography className="py-8 " variant="body3" color="neutral-90">
                 Berbagi kepada sesama memberi jiwa rasa damai. Berbagi dengan
                 tulus tanpa pamrih memberikan perasaan suka cita. ayo berwakaf
                 bersama kami
-              </p>
+              </Typography>
               <CustomButton color="Primary" label="Mulai Berwakaf" />
             </div>
             <div className="md:w-[58%] flex justify-end order ">
@@ -36,7 +40,6 @@ function Home() {
           </div>
         </div>
       </section>
-
       <section className="py-[4rem]">
         <div className=" container">
           <div className="md:flex ">
@@ -44,78 +47,95 @@ function Home() {
               <div className="grid grid-cols-2 gap-6 md:gap-8">
                 <CardCategory text="Wakaf Pendidikan" icon={education} />
                 <CardCategory text="Wakaf Bangunan" icon={building} />
-                <CardCategory text="Wakaf Pendidikan" icon={education} />
-                <CardCategory text="Wakaf Bangunan" icon={building} />
+                <CardCategory text="Wakaf Kesehatan" icon={health} />
+                <CardCategory text="Wakaf Umum" icon={ribbon} />
               </div>
             </div>
             <div className="md:w-[42%] ">
               <div className="py-[4rem]">
-                <p className="text-BtnColor">Kategori</p>
-                <h1 className="text-5xl  text-Primary-900 font-bold leading-[55px] pt-9">
+                <Typography color="btnColor">Kategori</Typography>
+                <Typography
+                  className="pt-9"
+                  variant="h2"
+                  color="primary-90"
+                  type="bold"
+                >
                   Beberapa Program Wakaf kami untuk anda
-                </h1>
-                <p className=" text-base leading-5 pt-9 md:pt-14 ">
+                </Typography>
+                <Typography
+                  className="pt-8 md:pt-10"
+                  variant="body3"
+                  color="neutral-90"
+                >
                   Kami memiliki beberapa kategori wakaf yang memambantu anda
                   untuk menyalurkan wakaf anda
-                </p>
+                </Typography>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="bg-[#FBFBFB] py-[4rem]">
+      <section className="bg-whiteBg py-[4rem]">
         <div className="container">
           <div className="text-center pb-8">
-            <h1 className="text-4xl font-bold text-TitleText">
-              Ayo Mulai Berwakaf{" "}
-            </h1>
+            <Typography variant="h3" color="navy" type="bold">
+              Ayo Mulai Berwakaf
+            </Typography>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3  gap-y-7">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-7">
             <CardWakaf />
             <CardWakaf />
             <CardWakaf />
           </div>
-          <div className=" flex justify-center pt-4">
-            <span className="flex items-center text-center text-BtnColor cursor-pointer">
+          <div className="flex justify-center pt-4">
+            <Typography
+              className="flex items-center text-center cursor-pointer"
+              color="btnColor"
+            >
               Lihat Lainnya
-              <GrFormNextLink size={30} className="pl-1" color="#F98D3E" />
-            </span>
+              <IoIosArrowRoundForward size={30} className="pl-1" />
+            </Typography>
           </div>
         </div>
       </section>
-      <section className="bg-[#FBFBFB]">
+      <section className="bg-whiteBg">
         <div className="container">
           <Player />
         </div>
       </section>
-      <section className="bg-[#FBFBFB] py-[2rem]">
+      <section className="bg-whiteBg ">
         <div className="container">
           <div className="text-center pb-9">
-            <h1 className="text-4xl font-bold text-TitleText">Berita Wakaf</h1>
+            <Typography variant="h3" color="navy" type="bold">
+              Berita Wakaf
+            </Typography>
           </div>
-          <div className=" grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <CardBerita />
             <CardBerita />
           </div>
           <div className=" flex justify-center pt-7">
-            <span className="flex items-center text-center  text-BtnColor cursor-pointer">
+            <Typography
+              className="flex items-center text-center cursor-pointer"
+              color="btnColor"
+            >
               Lihat Lainnya
-              <GrFormNextLink size={30} className="pl-1 text-BtnColor" />
-            </span>
+              <IoIosArrowRoundForward size={30} className="pl-2" />
+            </Typography>
           </div>
         </div>
       </section>
-      <section className="bg-[#FBFBFB]  py-[2rem] pb-[5rem]">
+      <section className="bg-whiteBg py-[6rem] ">
         <div className="container">
           <div className="text-center pb-9">
-            <h1 className="text-4xl font-bold text-TitleText">
+            <Typography variant="h3" color="navy" type="bold">
               Mitra Wakaf Al Hambra
-            </h1>
+            </Typography>
           </div>
           <CarouselMitra />
         </div>
       </section>
-    </Layout>
+    </>
   );
 }
 

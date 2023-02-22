@@ -4,18 +4,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        Primary: {
-          900: "#204C94",
+        primary: {
+          100: "#22509B",
+          90: "#3862A5",
+          80: "#4E73AF",
+          70: "#6485B9",
+          60: "#7A96C3",
         },
-        Neutral: {
-          800: "#A5A6AC",
-          900: "#828387",
+        neutral: {
+          80: "#A5A6AC",
+          90: "#828387",
         },
-        TitleText: "#27303E",
-        SubText: "#3F4753",
-        BtnColor: "#F98D3E",
+        titleText: "#27303E",
+        subText: "#3F4753",
+        btnColor: "#F98D3E",
+        whiteBg: "#FBFBFB",
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
+  corePlugins: {
+    preflight: false, // <== disable this!
+  },
 };

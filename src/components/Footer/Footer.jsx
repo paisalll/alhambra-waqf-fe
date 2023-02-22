@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-Primary-900">
+    <footer className="w-full bg-primary-90">
       <div className="container py-7 ">
         <h1 className="text-2xl font-semibold text-white">Wakaf Al-Hambra</h1>
         <div className=" md:flex justify-between pt-5">
@@ -33,19 +33,19 @@ const Footer = () => {
             <p>021 7261233 Ext 253</p>
           </div>
           <div className="pt-5 md:w-[30%] lg:w-[20%] text-end flex gap-2 ">
-            <button className="rounded-full bg-slate-50 h-9 w-9  ">
+            <button className="rounded-full bg-slate-50 h-9 w-9 border-none items-center ">
               <FaFacebookF className="text-blue-700 h-5 w-9" />
             </button>
-            <button className="rounded-full bg-slate-50 h-9 w-9 ">
+            <button className="rounded-full bg-slate-50 h-9 w-9 border-none items-center">
               <FaTwitter className="text-blue-900 h-5 w-9" />
             </button>
-            <button className="rounded-full bg-slate-50 h-9 w-9  ">
+            <button className="rounded-full bg-slate-50 h-9 w-9 border-none items-center ">
               <FaYoutube className="text-red-800 h-5 w-9" />
             </button>
-            <button className="rounded-full bg-slate-50 h-9 w-9  ">
+            <button className="rounded-full bg-slate-50 h-9 w-9  border-none items-center">
               <FaTiktok className="text-black h-5 w-9" />
             </button>
-            <button className="rounded-full bg-slate-50 h-9 w-9 flex justify-center items-center">
+            <button className="rounded-full bg-slate-50 h-9 w-9 border-none items-center">
               <FaInstagram className="text-pink-800 h-5 w-9" />
             </button>
           </div>

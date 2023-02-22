@@ -2,9 +2,9 @@ import React from "react";
 import ReactPlayer from "react-player/youtube";
 const Player = () => {
   return (
-    <div className="player-wrapper rounded-3xl">
+    <div className="player-wrapper ">
       <ReactPlayer
-        className="react-player "
+        className="react-player"
         url="https://youtu.be/KIwgfJF_gEk"
         width="100%"
         height="80%"

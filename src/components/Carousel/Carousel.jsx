@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../Carousel/Carousel.scss";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
+
 export const CarouselGambar = () => {
   const slides = [
     {
@@ -96,50 +98,69 @@ export const CarouselMitra = () => {
       },
     ],
   };
+  const slides = [
+    {
+      url: "https://www.abdsi.id/wp-content/uploads/2020/12/logo-bni.jpg",
+    },
+    {
+      url: "https://media.hitekno.com/thumbs/2021/10/12/99214-logo-bukalapak/730x480-img-99214-logo-bukalapak.jpg",
+    },
+    {
+      url: "https://cdn0-production-images-kly.akamaized.net/SO1G6olCMK0mIGEIkftE0eHbYLM=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/842928/original/079423500_1428048706-QNB-logo.jpg",
+    },
+
+    {
+      url: "https://cdn.antaranews.com/cache/800x533/2015/06/2015060320150528visa.jpg",
+    },
+    {
+      url: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80",
+    },
+  ];
   return (
     <Slider {...settings}>
-      <div className="bg-black">
+      {slides.map((item) => (
+        <div className=" w-[1.5rem] h-[10rem] pr-5">
+          <img
+            src={item.url}
+            alt="img-logo"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      ))}
+    </Slider>
+  );
+};
+
+export const CarouselBerita = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    appendDots: (dots) => (
+      <div>
+        <ul style={{ color: "#204C94" }}> {dots} </ul>
+      </div>
+    ),
+  };
+  return (
+    <Slider {...settings}>
+      <div className="w-full">
         <img
-          src="https://buatlogoonline.com/wp-content/uploads/2022/10/Logo-BNI.jpg"
-          alt="img-logo"
-          className="object-contain w-[15rem] h-[10rem] "
+          src="https://www.ekonomisyariah.org/wp-content/uploads/2022/06/Perkembangan-Wakaf-Uang-di-Indonesia.jpg"
+          alt="wakaf"
+          className="rounded-3xl h-[26rem] w-full object-cover "
         />
       </div>
-      <div className="flex justify-center items-center">
+      <div className="w-full">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/9/99/Wings_%28Indonesian_company%29_logo.svg"
-          alt="img-logo"
-          className="w-[15rem] h-[10rem] object-contain object-right"
+          src="https://www.ekonomisyariah.org/wp-content/uploads/2022/06/Perkembangan-Wakaf-Uang-di-Indonesia.jpg"
+          alt="wakaf"
+          className="rounded-3xl h-[26rem] w-full object-cover "
         />
-      </div>
-      <div className=" ">
-        <img
-          src="https://d1sag4ddilekf6.azureedge.net/compressed/merchants/6-C2XECALFAVAEME/hero/e0e4d2b9dfb048fcae1c6934cd32cbbe_1628497395464010525.png"
-          alt="img-logo"
-          className="w-[15rem] h-[10rem] object-contain justify-center "
-        />
-      </div>
-      <div>
-        <img
-          src="https://upload.wikimedia.org/wikimedia/id/d/dc/Bank_Mandiri.jpg"
-          alt="img-logo"
-        />
-      </div>
-      <div>
-        <img
-          src="https://1.bp.blogspot.com/-uBcG0Wx6QVE/YBvz5jBBq9I/AAAAAAAAH4c/w0boQaSfo3IMLc7RBEGIRObQP4eUSKQ_QCLcBGAsYHQ/s1682/logo-bsi.png"
-          alt="img-logo"
-          className="w-[15rem] h-[10rem] object-contain"
-        />
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-      <div>
-        <h3>7</h3>
-      </div>
-      <div>
-        <h3>8</h3>
       </div>
     </Slider>
   );
