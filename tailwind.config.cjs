@@ -15,7 +15,7 @@ module.exports = {
           80: "#A5A6AC",
           90: "#828387",
         },
-        titleText: "#27303E",
+        text01: "#27303E",
         subText: "#3F4753",
         btnColor: "#F98D3E",
         whiteBg: "#FBFBFB",
