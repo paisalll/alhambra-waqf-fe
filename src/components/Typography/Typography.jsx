@@ -20,6 +20,7 @@ export default function Typography({
           "text-neutral-80": color === "neutral-80",
           "text-neutral-90": color === "neutral-90",
           "text-text01": color === "navy",
+          "text-text02": color === "text02",
           "text-subText": color === "subText",
           "text-btnColor": color === "btnColor",
         },
