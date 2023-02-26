@@ -6,12 +6,17 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import { Dropdown, message, Space } from "antd";
 
-const onClick = ({ key }) => {
-  message.info(`Click on item ${key}`);
-};
 const items = [
   {
-    label: "Tentang Kami",
+    label: (
+      <NavLink
+        to="/tentang-alhambra"
+        // style={navLinkStyle}
+        className="no-underline"
+      >
+        <li>Tentang Kami</li>
+      </NavLink>
+    ),
     key: "1",
   },
   {
@@ -61,7 +66,6 @@ const Header = () => {
               >
                 <li>Pembayaran Wakaf</li>
               </NavLink>
-
               <Dropdown
                 menu={{
                   items,
@@ -69,7 +73,10 @@ const Header = () => {
                 }}
               >
                 <li onClick={(e) => e.preventDefault()}>
-                  <Space className="text-base cursor-pointer">
+                  <Space
+                    className="text-base cursor-pointer"
+                    style={navLinkStyle}
+                  >
                     Tentang Kami
                     <HiOutlineChevronDown />
                   </Space>
