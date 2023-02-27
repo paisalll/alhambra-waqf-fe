@@ -36,6 +36,7 @@ jobs:
           port: 22
           script: |
             cd alhambra-waqf-fe
+            rm -rf dist
             git pull origin main
             npm install
             npm run build
