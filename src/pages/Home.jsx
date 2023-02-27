@@ -21,7 +21,7 @@ function Home() {
           <div className=" md:flex ">
             <div className="md:w-[42%] ">
               <Typography variant="h2" type="bold" color="primary-90">
-                Mari Berlomba dan Ayo Berwakaf
+                Mari Berlomba dan Ayo Berwakaf update
               </Typography>
               <Typography className="py-8 " variant="body3" color="neutral-90">
                 Berbagi kepada sesama memberi jiwa rasa damai. Berbagi dengan
