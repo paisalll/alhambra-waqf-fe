@@ -38,7 +38,6 @@ jobs:
             cd alhambra-waqf-fe
             rm -rf dist
             git pull origin main
-            npm install
-            npm audit fix
+            npm install --silent
             npm run build
             yes | cp -rf -r /root/alhambra-waqf-fe/dist/* /var/www/html/
