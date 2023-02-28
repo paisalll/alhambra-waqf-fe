@@ -46,5 +46,5 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           script: |
-            cd alhambrawakaf-fe
-            yes | cp -rf -r /root/alhambra-waqf-fe/dist/* /var/www/html/
+            cd /root/alhambrawakaf-fe
+            yes | cp -rf -r /root/alhambrawakaf-fe/dist/* /var/www/html/
