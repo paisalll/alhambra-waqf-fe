@@ -35,7 +35,7 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           source: ".,!node_modules"
-          target: "/root/alhambrawakaf"
+          target: "/root/alhambrawakaf-fe"
           overwrite: true
 
       - name: Deploy Using ssh
@@ -46,8 +46,5 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           script: |
-            cd alhambra-waqf-fe
-            rm -rf dist
-            npm install 
-            npm run build
+            cd alhambrawakaf-fe
             yes | cp -rf -r /root/alhambra-waqf-fe/dist/* /var/www/html/
