@@ -35,7 +35,7 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           source: ".,!node_modules"
-          target: "/root/alhambra-waqf-fe"
+          target: "/root/alhambrawakaf"
           overwrite: true
 
       - name: Deploy Using ssh
