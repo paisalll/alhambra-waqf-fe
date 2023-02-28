@@ -11,7 +11,7 @@ export default function DetailBerita() {
           className="w-full h-[25rem] object-cover rounded-[5px]"
         />
       </div>
-      <section className="pt-6">
+      <article className="pt-6">
         <Typography variant="h3" type="medium" color="navy">
           Pembangunan Mesjid Al-Hambra di daerah Palsetina
         </Typography>
@@ -85,7 +85,7 @@ export default function DetailBerita() {
             pembangunan ini," kata Kang Emil.
           </Typography>
         </div>
-      </section>
+      </article>
       <section className="pt-20">
         <Typography type="normal" variant="h4" color="navy">
           Berita Lainnya

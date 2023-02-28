@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "../layouts";
-import Home from "../pages/Home";
+import Home from "../pages";
 import Kategori from "../pages/Kategori";
 import BeritaWakaf from "../pages/BeritaWakaf";
 import PembayaranWakaf from "../pages/PembayaranWakaf";
