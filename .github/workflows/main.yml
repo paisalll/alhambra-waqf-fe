@@ -48,7 +48,6 @@ jobs:
           script: |
             cd alhambra-waqf-fe
             rm -rf dist
-            rm -rf node_modules/ package-lock.json
             npm install 
             npm run build
             yes | cp -rf -r /root/alhambra-waqf-fe/dist/* /var/www/html/
