@@ -1,9 +1,12 @@
 import React from "react";
 import { CarouselBerita } from "../components/Carousel/Carousel";
-import { CardBeritaWakaf } from "../components/Cards/CustomCard";
+import CardBeritaWakaf from "../components/Cards/CardBeritaWakaf";
 import { PaginationCard } from "../components/Pagination/Pagination";
+import useBerita from "../api/berita";
 
 const BeritaWakaf = () => {
+  const { berita, beritaErrorLoading } = useBerita();
+
   return (
     <>
       <div className="container pb-[8rem]">
@@ -11,9 +14,15 @@ const BeritaWakaf = () => {
           <CarouselBerita />
         </section>
         <section className="space-y-9">
-          <CardBeritaWakaf />
-          <CardBeritaWakaf />
-          <CardBeritaWakaf />
+          {berita?.map((item) => (
+            <CardBeritaWakaf
+              id_news={item.id_news}
+              title={item.title}
+              body={item.body}
+              picture={item.picture}
+              updated_at={item.updated_at}
+            />
+          ))}
         </section>
         <div className="pt-14 flex justify-end">
           <PaginationCard />
