@@ -52,3 +52,17 @@ body {
 .ant-dropdown-trigger {
   @apply text-neutral-80;
 }
+.flexBetween {
+  @apply flex;
+  @apply justify-between;
+  @apply items-center;
+}
+.position-right {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: -4rem;
+}
+.ant-card-body {
+  padding: 18px !important;
+}

@@ -12,11 +12,13 @@ module.exports = {
           60: "#7A96C3",
         },
         neutral: {
+          60: "#D6D7DE",
           80: "#A5A6AC",
           90: "#828387",
         },
         text01: "#27303E",
         text02: "#606770",
+        text03: "#969A9F",
         subText: "#3F4753",
         btnColor: "#F98D3E",
         whiteBg: "#FBFBFB",
