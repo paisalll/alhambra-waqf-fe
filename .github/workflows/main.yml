@@ -43,4 +43,4 @@ jobs:
             docker stop wakaf-fe
             docker rm wakaf-fe
             docker rmi faturfawkes/alhambra-fe
-            docker run --name wakaf-fe -p 5173:5173 -d VITE_REACT_APP_BASE_URL=${{ secrets.BASE_URL }} annisard/alhambra:latest
+            docker run --name wakaf-fe -p 5173:5173 -d VITE_REACT_APP_BASE_URL=${{ secrets.BASE_URL }} faturfawkes/alhambra:latest
