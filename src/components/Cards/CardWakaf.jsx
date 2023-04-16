@@ -15,7 +15,10 @@ const CardWakaf = ({ img, category, collected, fundTarget, title, due_date, id }
       br="12px"
     >
       <img
-        src={img}
+        src={
+          img ||
+          "https://flat-icons.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png"
+        }
         className="object-cover rounded-xl h-[10rem] md:h-[12rem] w-full"
         alt="Foto Wakaf"
       />

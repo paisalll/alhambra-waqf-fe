@@ -1,5 +1,5 @@
 import React from "react";
-import { CarouselBerita } from "../components/Carousel/Carousel";
+import { CarouselBerita } from "../components/Carousel/CarouselBerita";
 import CardBeritaWakaf from "../components/Cards/CardBeritaWakaf";
 import { PaginationCard } from "../components/Pagination/Pagination";
 import useBerita from "../api/berita";
@@ -16,6 +16,7 @@ const BeritaWakaf = () => {
         <section className="space-y-9">
           {berita?.map((item) => (
             <CardBeritaWakaf
+              key={item.id_news}
               id_news={item.id_news}
               title={item.title}
               body={item.body}

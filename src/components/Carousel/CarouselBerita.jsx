@@ -1,12 +1,12 @@
 // @ts-nocheck
 import React, { useState } from "react";
-// @ts-ignore
 import { useKeenSlider } from "keen-slider/react";
 import imgSlider from "../../data/carousel";
 import "keen-slider/keen-slider.min.css";
 import "../Carousel/Carousel.scss";
+import Typography from "../Typography/Typography";
 
-export const CarouselGambar = () => {
+export const CarouselBerita = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider(
@@ -59,15 +59,23 @@ export const CarouselGambar = () => {
       <div className="relative">
         <div ref={sliderRef} className="keen-slider rounded-xl">
           {imgSlider.map((item, i) => (
-            <div className="keen-slider__slide slider">
+            <div className="keen-slider__slide slider-berita">
               <img src={item.url} alt={"wakaf-photo" + i} className="object-cover h-full w-full" />
+              <div className="title-news">
+                <Typography color="white" variant="h5" type="normal" className="p-4">
+                  Pembangunan Mesjid Al-Hambra di daerah Tanggerang Selatan
+                </Typography>
+              </div>
             </div>
           ))}
         </div>
       </div>
       {loaded && instanceRef.current && (
         <div className="dots">
-          {[...Array(instanceRef.current.track.details.slides.length).keys()].map((idx) => {
+          {[
+            ...// @ts-ignore
+            Array(instanceRef.current.track.details.slides.length).keys(),
+          ].map((idx) => {
             return (
               <button
                 key={idx}

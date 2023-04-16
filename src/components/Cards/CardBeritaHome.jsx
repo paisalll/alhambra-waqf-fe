@@ -1,7 +1,7 @@
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Typography from "../Typography/Typography";
-const CardBeritaHome = ({ key, title, body, picture }) => {
+const CardBeritaHome = ({ title, body, picture }) => {
   return (
     <div className="flex">
       <div className="basis-2/5 h-[9rem] md:h-[9rem] ">

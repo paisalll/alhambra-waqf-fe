@@ -6,19 +6,20 @@ import jmlProgram from "../assets/svg/Product.svg";
 import totalwakaf from "../assets/svg/Investing.svg";
 import investing from "../assets/svg/Ecology.svg";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { CarouselMitra } from "../components/Carousel/Carousel";
 import { Link } from "react-router-dom";
 import CardBeritaHome from "../components/Cards/CardBeritaHome";
 import CardCategory from "../components/Cards/CardCategory";
 import CardWakaf from "../components/Cards/CardWakaf";
 import CustomButton from "../components/Button";
-import Player from "../components/Player";
+import Player from "../components/VideoPlayer/Player";
 import Typography from "../components/Typography/Typography";
 import { useWakaf } from "../api/wakaf ";
 import useBerita from "../api/berita";
 import CardIcon from "../components/Cards/CardIcon";
+import { CarouselGambar } from "../components/Carousel/Carousel";
+import { MitraWakaf } from "../components/Carousel/MitraWakaf";
 
-function Home() {
+const Home = () => {
   const { wakaf, wakafErrorLoading } = useWakaf();
   const { berita, beritaErrorLoading } = useBerita();
   return (
@@ -26,7 +27,7 @@ function Home() {
       <section className="bg-whiteBg pt-[8rem] pb-[5rem] ">
         <div className=" container">
           <div className=" md:flex ">
-            <div className="md:w-[42%] ">
+            <div className="md:w-[55%] ">
               <Typography variant="h2" type="bold" color="primary-90">
                 Mari Berlomba dan Ayo Berwakaf
               </Typography>
@@ -38,12 +39,8 @@ function Home() {
                 <CustomButton color="Primary" label="Mulai Berwakaf" />
               </Link>
             </div>
-            <div className="md:w-[58%] flex justify-end order ">
-              <img
-                src="https://www.ekonomisyariah.org/wp-content/uploads/2022/06/Perkembangan-Wakaf-Uang-di-Indonesia.jpg"
-                alt="wakaf"
-                className="rounded-3xl w-[30rem] md:h-[20rem]"
-              />
+            <div className="md:w-[45%] pl-4 ">
+              <CarouselGambar />
             </div>
           </div>
         </div>
@@ -84,6 +81,7 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-y-7">
             {wakaf?.slice(0, 3).map((item) => (
               <CardWakaf
+                key={item.id}
                 id={item.id}
                 img={item.picture}
                 category={item.category}
@@ -111,7 +109,7 @@ function Home() {
       </section>
       <section className="bg-whiteBg ">
         <div className="container">
-          <div className="text-center pb-9">
+          <div className="text-center pbs-9">
             <Typography variant="h3" color="navy" type="bold">
               Berita Wakaf
             </Typography>
@@ -119,6 +117,7 @@ function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {berita?.slice(0, 2).map((item) => (
               <CardBeritaHome
+                key={item.id_news}
                 id_news={item.id_news}
                 title={item.title}
                 body={item.body}
@@ -150,11 +149,11 @@ function Home() {
               Mitra Wakaf Al Hambra
             </Typography>
           </div>
-          <CarouselMitra />
+          <MitraWakaf />
         </div>
       </section>
     </>
   );
-}
+};
 
 export default Home;

@@ -154,6 +154,7 @@ const DetailWakaf = () => {
         <div className="grid grid-cols-1 md:grid-cols-3">
           {wakaf?.slice(0, 3).map((item) => (
             <CardWakaf
+              key={item.id}
               id={item.id}
               img={item.picture}
               category={item.category}

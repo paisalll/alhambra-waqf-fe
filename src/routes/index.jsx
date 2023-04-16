@@ -11,11 +11,13 @@ import { QueryParamProvider } from "use-query-params";
 import { ReactRouter6Adapter } from "use-query-params/adapters/react-router-6";
 import DetailWakaf from "../pages/DetailWakaf";
 import AssetWakaf from "../pages/AssetWakaf";
+import ScrollToTop from "../helpers/onChangeRoutes.js";
 
 const index = () => {
   return (
     <BrowserRouter>
       <QueryParamProvider adapter={ReactRouter6Adapter}>
+        <ScrollToTop />
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />

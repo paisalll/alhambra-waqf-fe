@@ -12,6 +12,9 @@ export default defineConfig({
     proxy: {
       "/api": "https://wakafalhambra.xyz",
     },
+    host: true,
+    strictPort: true,
+    port: 5173,
   },
   resolve: {
     alias: [{ find: "@", replacement: path.resolve(__dirname, "/src") }],

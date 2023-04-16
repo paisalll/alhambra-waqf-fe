@@ -1,13 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 
-export default function Typography({
-  children,
-  color,
-  variant,
-  type,
-  className,
-}) {
+export default function Typography({ children, color, variant, type, className }) {
   return (
     <div
       className={clsx(
@@ -19,8 +13,9 @@ export default function Typography({
           "text-primary-60": color === "primary-60",
           "text-neutral-80": color === "neutral-80",
           "text-neutral-90": color === "neutral-90",
-          "text-text01": color === "navy",
+          "text-text01": color === "text01",
           "text-text02": color === "text02",
+          "text-text03": color === "text03",
           "text-subText": color === "subText",
           "text-btnColor": color === "btnColor",
         },
@@ -45,7 +40,7 @@ export default function Typography({
           "font-bold": type === "bold",
           "font-extrabold": type === "extrabold",
         },
-        className
+        className,
       )}
     >
       {children}

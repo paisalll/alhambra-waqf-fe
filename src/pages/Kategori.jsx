@@ -1,15 +1,18 @@
-import React from "react";
-import education from "../assets/education.png";
-import building from "../assets/building.png";
-import health from "../assets/health.png";
-import ribbon from "../assets/ribbon.png";
+import React, { useMemo, useState } from "react";
 import CardCategory from "../components/Cards/CardCategory";
 import CardWakaf from "../components/Cards/CardWakaf";
 import { PaginationCard } from "../components/Pagination/Pagination";
 import Typography from "../components/Typography/Typography";
 import { useWakaf } from "../api/wakaf ";
+import data from "../data/categories";
 const Kategori = () => {
+  const [categories, setCategories] = useState(data);
   const { wakaf, wakafErrorLoading } = useWakaf();
+  const categoryWakaf = wakaf?.map((item) => item.category);
+
+  const filterCategory = useMemo(() => {
+    return data.filter((item) => item.categories === categoryWakaf);
+  });
   return (
     <>
       <section className="pt-[8rem] pb-[5rem] ">
@@ -20,10 +23,15 @@ const Kategori = () => {
             </Typography>
           </div>
           <div className="grid grid-cols-4  place-items-center">
-            <CardCategory text="Wakaf Pendidikan" icon={education} />
-            <CardCategory text="Wakaf Bangunan" icon={building} />
-            <CardCategory text="Wakaf Pendidikan" icon={health} />
-            <CardCategory text="Wakaf Bangunan" icon={ribbon} />
+            {categories?.map((item) => (
+              <CardCategory
+                title={item.title}
+                icon={item.icon}
+                category={categories}
+                key={item.id}
+                filterCategory={filterCategory}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -35,8 +43,9 @@ const Kategori = () => {
             </Typography>
           </div>
           <div className="grid grid-cols-3 gap-8">
-            {wakaf?.map((item) => (
+            {wakaf?.map((item, i) => (
               <CardWakaf
+                key={item.id}
                 id={item.id}
                 img={item.picture}
                 category={item.category}

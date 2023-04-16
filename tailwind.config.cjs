@@ -24,6 +24,9 @@ module.exports = {
         whiteBg: "#FBFBFB",
       },
     },
+    fontFamily: {
+      inter: ["sans-serif"],
+    },
   },
   plugins: [],
   corePlugins: {

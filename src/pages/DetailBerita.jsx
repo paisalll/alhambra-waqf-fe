@@ -92,6 +92,7 @@ export default function DetailBerita() {
         <div className="pt-6 grid grid-cols-3 gap-8">
           {berita?.slice(0, 3).map((item) => (
             <CardDisplayBerita
+              key={item.id_news}
               id={item.id_news}
               title={item.title}
               picture={item.picture}

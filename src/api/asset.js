@@ -6,16 +6,12 @@ const URL = HOST + "/asset";
 const fetcher = async (url) => axios.get(URL).then((res) => res.data);
 
 export const useAsset = () => {
-  const {
-    data: asset,
-    mutate,
-    error: assetErrorLoading,
-  } = useSWR(URL, fetcher, { use: [immutable] });
-  const assetLoading = !asset && !assetErrorLoading;
+  const { data, mutate, error: assetErrorLoading } = useSWR(URL, fetcher, { use: [immutable] });
+  const assetLoading = !data && !assetErrorLoading;
   return {
     assetLoading,
     assetErrorLoading,
-    asset: asset?.data,
+    data: data?.data,
     mutate,
   };
 };
