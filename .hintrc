@@ -7,10 +7,16 @@
       "default",
       {
         "ignore": [
-          "aspect-ratio"
+          "aspect-ratio",
+          "backdrop-filter",
+          "border-start-end-radius",
+          "border-end-end-radius",
+          "user-select"
         ]
       }
     ],
-    "detect-css-reflows/layout": "off"
+    "detect-css-reflows/layout": "off",
+    "detect-css-reflows/composite": "off",
+    "detect-css-reflows/paint": "off"
   }
 }
