@@ -31,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: annisard/alhambra
+          tags: faturfawkes/alhambra-fe
       - name: executing remote ssh using ssh key
         uses: appleboy/ssh-action@master
         with:
@@ -42,5 +42,5 @@ jobs:
           script: |
             docker stop wakaf-fe
             docker rm wakaf-fe
-            docker rmi annisard/alhambra
+            docker rmi faturfawkes/alhambra-fe
             docker run --name wakaf-fe -p 5173:5173 -d VITE_REACT_APP_BASE_URL=${{ secrets.BASE_URL }} annisard/alhambra:latest
