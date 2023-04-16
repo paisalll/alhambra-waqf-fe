@@ -20,7 +20,11 @@ const items = [
     key: "1",
   },
   {
-    label: "Aset Wakaf",
+    label: (
+      <NavLink to="/asset-wakaf" className="no-underline">
+        <li>Asset Wakaf</li>
+      </NavLink>
+    ),
     key: "2",
   },
 ];
@@ -45,25 +49,13 @@ const Header = () => {
               <NavLink to="/" style={navLinkStyle} className="no-underline">
                 <li>Home</li>
               </NavLink>
-              <NavLink
-                to="/kategori-wakaf"
-                style={navLinkStyle}
-                className="no-underline"
-              >
+              <NavLink to="/kategori-wakaf" style={navLinkStyle} className="no-underline">
                 <li>Kategori</li>
               </NavLink>
-              <NavLink
-                to="/berita-wakaf"
-                style={navLinkStyle}
-                className="no-underline"
-              >
+              <NavLink to="/berita-wakaf" style={navLinkStyle} className="no-underline">
                 <li>Berita Wakaf</li>
               </NavLink>
-              <NavLink
-                to="/pembayaran-wakaf"
-                style={navLinkStyle}
-                className="no-underline"
-              >
+              <NavLink to="/pembayaran-wakaf" style={navLinkStyle} className="no-underline">
                 <li>Pembayaran Wakaf</li>
               </NavLink>
               <Dropdown
@@ -73,10 +65,7 @@ const Header = () => {
                 }}
               >
                 <li onClick={(e) => e.preventDefault()}>
-                  <Space
-                    className="text-base cursor-pointer"
-                    style={navLinkStyle}
-                  >
+                  <Space className="text-base cursor-pointer">
                     Tentang Kami
                     <HiOutlineChevronDown />
                   </Space>
@@ -91,10 +80,7 @@ const Header = () => {
             />
           </div>
           {/* mobile */}
-          <div
-            className="block lg:hidden pt-3 text-TitleText"
-            onClick={handleNav}
-          >
+          <div className="block lg:hidden pt-3 text-TitleText" onClick={handleNav}>
             {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
           </div>
         </div>

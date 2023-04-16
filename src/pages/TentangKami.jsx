@@ -3,12 +3,17 @@ import React from "react";
 
 const TentangKami = () => {
   return (
-    <section className="container pt-[8rem] pb-[5rem]">
-      <Typography variant="h2" type="bold" color="primary-90">
-        Tentang Kami
-      </Typography>
-      <article className="pt-6 text-justify">
-        <Typography variant="h3" color="primary-90" type="semibold">
+    <section className="pt-[8rem] pb-[5rem] bg-white">
+      <article className="text-justify container">
+        <Typography variant="h2" type="bold" color="primary-90">
+          Tentang Kami
+        </Typography>
+        <Typography
+          variant="h3"
+          color="primary-90"
+          type="semibold"
+          className="pt-4"
+        >
           Sejarah dan Informasi Yayasan
         </Typography>
         <Typography
@@ -94,7 +99,70 @@ const TentangKami = () => {
         >
           Visi dan Misi
         </Typography>
-        <Typography>visi</Typography>
+        <Typography variant="h4" color="primary-90" className="pt-4">
+          visi
+        </Typography>
+        <Typography
+          variant="body2"
+          color="text02"
+          type="normal"
+          className="pt-4"
+        >
+          Menjadi lembaga pengelola wakaf yang mendorong kemajuan peradaban bagi
+          umat.
+        </Typography>
+        <Typography variant="h4" color="primary-90" className="pt-4">
+          Misi
+        </Typography>
+        <ol className="pl-[1rem] pt-4 text-text02 ">
+          <li>
+            orem ipsum dolor sit amet, consectetur adipiscing elit. Convallis
+            luctus ridiculus nibh odio tempus aliquet praesent sed. Quam vel sit
+            euismod in tortor tortor lorem.
+          </li>
+          <li>
+            orem ipsum dolor sit amet, consectetur adipiscing elit. Convallis
+            luctus ridiculus nibh odio tempus aliquet praesent sed. Quam vel sit
+            euismod in tortor tortor lorem.
+          </li>
+        </ol>
+        <Typography
+          variant="h3"
+          color="primary-90"
+          type="semibold"
+          className="pt-6"
+        >
+          Pengurus Wakaf
+        </Typography>
+        <Typography variant="h5" color="text01" type="medium" className="pt-4">
+          Struktur Pengelola
+        </Typography>
+        <div className="pt-4">
+          <Typography variant="body1" color="text02" type="medium">
+            PEMBINA YAYASAN
+          </Typography>
+          <Typography color="text02" variant="body2">
+            Ketua Pembina : Drs. H. Andi Parewangi.
+          </Typography>
+        </div>
+        <div className="pt-4">
+          <Typography variant="body1" color="text02" type="medium">
+            PENGURUS YAYASAN
+          </Typography>
+          <Typography color="text02" variant="body2">
+            Ketua Umum : Andi Muhammad Iqbal Parewangi. <br />
+            Sekretaris Umum : Andi Muhammad Shaifullah. <br />
+            Bendahara Umum : Dr. Andi Muhammad Luthfi Parewangi.
+          </Typography>
+        </div>
+        <div className="pt-4">
+          <Typography variant="body1" color="text02" type="medium">
+            PENGAWAS YAYASAN
+          </Typography>
+          <Typography color="text02" variant="body2">
+            Ketua Pengawas : Hj. Sitti Rafiah, BA.
+          </Typography>
+        </div>
       </article>
     </section>
   );
