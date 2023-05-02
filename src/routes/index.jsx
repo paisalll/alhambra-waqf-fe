@@ -26,7 +26,7 @@ const index = () => {
             <Route path="/berita-wakaf" element={<BeritaWakaf />} />
             <Route path="/berita-wakaf/:id_news" element={<DetailBerita />} />
             <Route path="/kategori-wakaf" element={<Kategori />} />
-            <Route path="/kategori-wakaf/:id" element={<DetailWakaf />} />
+            <Route path="/kategori-wakaf/:id_wakaf" element={<DetailWakaf />} />
             <Route path="/asset-wakaf" element={<AssetWakaf />} />
           </Routes>
         </Layout>
