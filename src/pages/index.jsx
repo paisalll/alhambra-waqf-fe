@@ -13,15 +13,17 @@ import CardWakaf from "../components/Cards/CardWakaf";
 import CustomButton from "../components/Button";
 import Player from "../components/VideoPlayer/Player";
 import Typography from "../components/Typography/Typography";
-import { useWakaf } from "../api/wakaf ";
+import { useWakaf } from "../api/wakaf";
 import useBerita from "../api/berita";
 import CardIcon from "../components/Cards/CardIcon";
 import { CarouselGambar } from "../components/Carousel/Carousel";
 import { MitraWakaf } from "../components/Carousel/MitraWakaf";
+import useSummary from "../api/summary";
 
 const Home = () => {
   const { wakaf, wakafErrorLoading } = useWakaf();
   const { berita, beritaErrorLoading } = useBerita();
+  const { data: summaryWakaf } = useSummary();
   return (
     <>
       <section className="bg-whiteBg pt-[8rem] pb-[5rem] ">
@@ -82,7 +84,7 @@ const Home = () => {
             {wakaf?.slice(0, 3).map((item) => (
               <CardWakaf
                 key={item.id}
-                id={item.id}
+                id_wakaf={item.id}
                 img={item.picture}
                 category={item.category}
                 collected={item.collected}
@@ -137,9 +139,9 @@ const Home = () => {
         </div>
       </section>
       <section className="container flex py-[6rem] items-center justify-evenly">
-        <CardIcon icon={jmlProgram} text="Jumlah Wakaf" jumlah="120" />
-        <CardIcon icon={totalwakaf} text="Total Wakaf" jumlah="90" />
-        <CardIcon icon={investing} text="Jumlah Wakif" jumlah="300" />
+        <CardIcon icon={jmlProgram} text="Jumlah Program" jumlah={summaryWakaf?.total_program} />
+        <CardIcon icon={totalwakaf} text="Total Wakaf" jumlah={`Rp.${summaryWakaf?.total_wakaf}`} />
+        <CardIcon icon={investing} text="Jumlah Wakif" jumlah={summaryWakaf?.total_wakif} />
       </section>
 
       <section className="bg-whiteBg py-[6rem] ">
