@@ -1,0 +1,26 @@
+.btn_logo {
+  @apply h-8 w-8 bg-pink-200 flex justify-center text-white;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.social_button {
+  @apply flex justify-center gap-3 pt-6;
+}
+.position_top {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: -15rem;
+}
+.ant-card-body {
+  padding: 18px !important;
+}
+.container_card {
+  display: flex;
+  gap: 3rem;
+}
+.container_cardWakaf {
+  @apply top-[-10rem] relative bottom-0;
+}
