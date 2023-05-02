@@ -13,6 +13,7 @@ module.exports = {
         },
         neutral: {
           60: "#D6D7DE",
+          70: "#C2C3C9",
           80: "#A5A6AC",
           90: "#828387",
         },
@@ -22,6 +23,9 @@ module.exports = {
         subText: "#3F4753",
         btnColor: "#F98D3E",
         whiteBg: "#FBFBFB",
+        twitter: "#54ACEE",
+        facebook: "#4C76BE",
+        whatsapp: "#45D354",
       },
     },
     fontFamily: {
