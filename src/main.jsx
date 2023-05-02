@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "../src/routes/index";
-import { useStore } from "./stores/store";
+import { useStore } from "./stores/useStore";
 import "../src/styles/main.scss";
 import { SWRConfig } from "swr";
 import { Provider } from "react-redux";
