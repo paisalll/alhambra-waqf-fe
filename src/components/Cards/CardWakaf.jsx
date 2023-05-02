@@ -5,13 +5,14 @@ import { CardSimples } from "./Styled";
 import "../Cards/Card.scss";
 import CustomButton from "../Button";
 import Typography from "../Typography/Typography";
-const CardWakaf = ({ img, category, collected, fundTarget, title, due_date, id }) => {
+import format from "../../helpers/formatRupiah";
+const CardWakaf = ({ img, category, collected, fundTarget, title, due_date, id_wakaf }) => {
   return (
     <CardSimples
-      className="capitalize shadow-custom"
+      className="capitalize shadow-custom "
       bg="white"
       height="auto"
-      width="19rem"
+      width="23rem"
       br="12px"
     >
       <img
@@ -26,11 +27,15 @@ const CardWakaf = ({ img, category, collected, fundTarget, title, due_date, id }
         <Typography className="pb-1" color="btnColor" type="medium" variant="body3">
           {category}
         </Typography>
-        <Link to={`/kategori-wakaf/${id}`} preventScrollReset={true} className="no-underline">
+        <Link
+          to={`/kategori-wakaf/${id_wakaf}`}
+          preventScrollReset={true}
+          className="no-underline decoration-transparent"
+        >
           <Typography
             className="leading-snug cursor-pointer multiline-ellipsis"
             type="semibold"
-            color="navy"
+            color="text01"
             variant="body3"
           >
             {title}
@@ -42,8 +47,8 @@ const CardWakaf = ({ img, category, collected, fundTarget, title, due_date, id }
           <Typography color="primary-90" type="normal" variant="body3">
             {collected}
           </Typography>
-          <Typography color="primary-60" type="normal" variant="body3">
-            Rp.{fundTarget}
+          <Typography color="text01" type="normal" variant="body3">
+            {format(fundTarget)}
           </Typography>
         </div>
         <Progress percent={30} strokeColor={"#3862A5"} showInfo={false} />
@@ -57,7 +62,9 @@ const CardWakaf = ({ img, category, collected, fundTarget, title, due_date, id }
         </div>
       </div>
       <div className="flex justify-center pt-5">
-        <CustomButton label="Wakaf Sekarang" color="Primary" />
+        <Link to={`/kategori-wakaf/${id_wakaf}`} preventScrollReset={true}>
+          <CustomButton label="Wakaf Sekarang" color="Primary" />
+        </Link>
       </div>
     </CardSimples>
   );
