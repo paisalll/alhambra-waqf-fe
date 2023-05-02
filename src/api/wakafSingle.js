@@ -1,17 +1,17 @@
+import React, { useMemo } from "react";
 import axios from "axios";
 import useSWR from "swr";
-import { HOST } from "../strings/index";
-const URL = HOST + "/wakaf";
-const fetcher = async (id_wakaf) => id_wakaf && (await axios.get(URL + id_wakaf)).data;
 
 export const useWakafById = (id_wakaf) => {
-  const { data, mutate, error: beritaSingleErrorLoading } = useSWR([URL, id_wakaf], fetcher);
-
-  const payload = data?.values;
-
+  const { data, mutate, error } = useSWR(
+    id_wakaf ? `https://wakafalhambra.xyz/wakaf/` + id_wakaf : null,
+    (key) => axios.get(key).then((res) => res.data),
+  );
+  const loading = !data && !error;
   return {
-    beritaSingleErrorLoading,
-    data: payload,
+    loading,
+    error,
+    data,
     mutate,
   };
 };

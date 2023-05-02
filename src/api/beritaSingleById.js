@@ -18,9 +18,6 @@
 // export default useBeritaSingleById;
 import useSWR from "swr";
 import axios from "axios";
-// import { HOST } from "../strings";
-
-// const URL = HOST + "/news/";
 
 export const useBeritaSingleById = (id_news) => {
   const { data, mutate, error } = useSWR(
