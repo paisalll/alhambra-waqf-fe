@@ -3,7 +3,7 @@ import CardCategory from "../components/Cards/CardCategory";
 import CardWakaf from "../components/Cards/CardWakaf";
 import { PaginationCard } from "../components/Pagination/Pagination";
 import Typography from "../components/Typography/Typography";
-import { useWakaf } from "../api/wakaf ";
+import { useWakaf } from "../api/wakaf";
 import data from "../data/categories";
 const Kategori = () => {
   const [categories, setCategories] = useState(data);
@@ -46,7 +46,7 @@ const Kategori = () => {
             {wakaf?.map((item, i) => (
               <CardWakaf
                 key={item.id}
-                id={item.id}
+                id_wakaf={item.id}
                 img={item.picture}
                 category={item.category}
                 collected={item.collected}
